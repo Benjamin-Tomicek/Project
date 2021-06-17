@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <!-- *** b4-navbar-placement *** -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger sticky-top">
+        <a class="navbar-brand" href="../index.html">Home</a>¨
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                
+                <li><a class="navbar-brand" href="../a/index.html">Historie</a>
+                </li>  
+                <li><a class="navbar-brand" href="../b/index.html">Památky
+                    </a>
+                </li> 
+                <li><a class="navbar-brand" href="#">Mapa
+                    </a>
+                </li> 
+                <li><a class="navbar-brand" href="../d/index.html">Zajímavosti</a>
+                </li>
+            </li>
+        </ul>
+                  
+                     
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <main class="container">
+    <h1 class="align-text-center display-1">Mapa</h1>
+    <head>
+      <div class="alert alert-info" role="alert">
+        <h2>Mapa obce Chuchelná</h2>
+        <title>Add Map</title>
+    
+        <!-- jsFiddle will insert css and js -->
+      </head>
+      <body>
+        <!--The div element for the map -->
+        <div id="map"></div>
+    
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly"
+          async
+        ></script>
+      </body>
+    </html>
+      <h2>Pohled na Chuchelnou</h2>
+      <video width="320" height="240" controls>
+      <source src="video.mp4" type="video/mp4">
+      <source src="video.mp4" type="video/ogg">
+    </video>
+  </div>
+</main>
+<footer class="container-fluid bg-dark mt-4">
+    <div class="row text-muted p-5">   
+      <footer>
+        <hr>
+        <p>&copy;2021 - Benjamin Tomíček</p>
+ 
+     </footer>  
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+           </body>
+           <script>
+               // Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const uluru = {
+    lat: 49.9882707,
+    lng: 18.118
+  };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 12,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
+           </script> 
+        </main>   
+</html>
